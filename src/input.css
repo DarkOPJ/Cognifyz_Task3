@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+
+/* Add your custom styles here */
+body{
+  @apply font-poppins bg-[#faf5ee] bg-[url('./img/img-noise-361x370.png')] text-myblack text-fontSizeBase; 
+}
+
+a{
+  @apply text-myblack
+}
+h1{
+  @apply text-myblack text-fontSizeXl
+}
+h2{
+  @apply text-myblack text-fontSizeLg
+}
+h3{
+  @apply text-myblack text-fontSizeMd
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+select,
+textarea{
+  @apply font-poppins text-fontSizeBase block box-border w-full py-[0.7rem] px-[0.75rem] mb-4
+}
+
+img{
+  @apply w-full h-auto
+}
+
+.btn{
+  @apply bg-myblack text-white cursor-pointer my-1 mx-0.5
+}
+.btn-delete{
+  @apply py-2.5 px-4 bg-myred
+}
+
+
+/* Pure CSS */
+.header{
+  grid-template-areas: 
+  "logo button"
+  "menu menu";
+}
+@media only screen and (min-width: 768px) {
+  .header{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "logo menu button";
+  }
+}
+.headerLogo{
+  grid-area: logo;
+}
+.headerNav{
+  grid-area: menu;
+}
+.headerBtn{
+  grid-area: button;
+}
+
+.navLink.active{
+  @apply  text-mygray
+}
+
+.articlesUl li:not(:last-child){
+  @apply border-b text-mylightgray
+}
+
+.articlesUl:hover li{
+  filter: blur(3px);
+}
+
+.articlesUl:hover li:hover{
+  filter: none;
+}
+
+.searchBar.open{
+  transform: translateY(0);
+  transition: transform 100ms;
+}
+
+
+/* Admin Dashboard */
+.admin-title{
+  @apply flex justify-between items-center
+}
+.admin-posts{
+  @apply p-0 m-0
+}
+.admin-posts-controls form{
+  @apply inline-block
+}
+.admin-posts-controls .btn{
+  @apply inline-block bg-myblack text-mylightgray border-0 font-[0.8rem] py-1 px-2 leading-loose
+}
+.admin-posts li{
+  @apply flex justify-between py-2.5
+}
