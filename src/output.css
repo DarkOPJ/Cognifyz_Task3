@@ -768,6 +768,16 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .pt-2\.5 {
   padding-top: 0.625rem;
 }
@@ -834,6 +844,10 @@ video {
 
 .duration-100 {
   transition-duration: 100ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
 }
 
 /* Add your custom styles here */
@@ -906,15 +920,6 @@ img {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.btn-delete {
-  --tw-bg-opacity: 1;
-  background-color: rgb(179 0 0 / var(--tw-bg-opacity, 1));
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 /* Pure CSS */
 
 .header{
@@ -943,67 +948,17 @@ img {
   grid-area: button;
 }
 
-.navLink.active {
-  --tw-text-opacity: 1;
-  color: rgb(119 119 119 / var(--tw-text-opacity, 1));
+.articlesUl li:hover{
+  background: #000;
 }
 
-.articlesUl li:not(:last-child) {
-  border-bottom-width: 1px;
-  --tw-text-opacity: 1;
-  color: rgb(228 228 228 / var(--tw-text-opacity, 1));
-}
-
-.articlesUl:hover li{
-  filter: blur(3px);
-}
-
-.articlesUl:hover li:hover{
+/* .articlesUl:hover li:hover{
   filter: none;
-}
+} */
 
 .searchBar.open{
   transform: translateY(0);
   transition: transform 100ms;
-}
-
-/* Admin Dashboard */
-
-.admin-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.admin-posts {
-  margin: 0px;
-  padding: 0px;
-}
-
-.admin-posts-controls form {
-  display: inline-block;
-}
-
-.admin-posts-controls .btn {
-  display: inline-block;
-  border-width: 0px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(28 28 28 / var(--tw-bg-opacity, 1));
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  font-weight: 0.8rem;
-  line-height: 2;
-  --tw-text-opacity: 1;
-  color: rgb(228 228 228 / var(--tw-text-opacity, 1));
-}
-
-.admin-posts li {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
 }
 
 .hover\:border-myblack:hover {
@@ -1011,9 +966,24 @@ img {
   border-color: rgb(28 28 28 / var(--tw-border-opacity, 1));
 }
 
+.hover\:bg-myblack:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(28 28 28 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:px-4:hover {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .hover\:text-myblack:hover {
   --tw-text-opacity: 1;
   color: rgb(28 28 28 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-mylightgray:hover {
+  --tw-text-opacity: 1;
+  color: rgb(228 228 228 / var(--tw-text-opacity, 1));
 }
 
 .hover\:underline:hover {
@@ -1022,6 +992,11 @@ img {
 
 .hover\:filter-none:hover {
   filter: none;
+}
+
+.group:hover .group-hover\:text-mylightgray {
+  --tw-text-opacity: 1;
+  color: rgb(228 228 228 / var(--tw-text-opacity, 1));
 }
 
 @media (min-width: 768px) {

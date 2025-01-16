@@ -37,9 +37,6 @@ img{
 .btn{
   @apply bg-myblack text-white cursor-pointer my-1 mx-0.5
 }
-.btn-delete{
-  @apply py-2.5 px-4 bg-myred
-}
 
 
 /* Pure CSS */
@@ -65,41 +62,16 @@ img{
   grid-area: button;
 }
 
-.navLink.active{
-  @apply  text-mygray
+
+.articlesUl li:hover{
+  background: #000;
 }
 
-.articlesUl li:not(:last-child){
-  @apply border-b text-mylightgray
-}
-
-.articlesUl:hover li{
-  filter: blur(3px);
-}
-
-.articlesUl:hover li:hover{
+/* .articlesUl:hover li:hover{
   filter: none;
-}
+} */
 
 .searchBar.open{
   transform: translateY(0);
   transition: transform 100ms;
-}
-
-
-/* Admin Dashboard */
-.admin-title{
-  @apply flex justify-between items-center
-}
-.admin-posts{
-  @apply p-0 m-0
-}
-.admin-posts-controls form{
-  @apply inline-block
-}
-.admin-posts-controls .btn{
-  @apply inline-block bg-myblack text-mylightgray border-0 font-[0.8rem] py-1 px-2 leading-loose
-}
-.admin-posts li{
-  @apply flex justify-between py-2.5
 }
