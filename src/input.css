@@ -67,9 +67,27 @@ img{
   background: #000;
 }
 
-/* .articlesUl:hover li:hover{
-  filter: none;
-} */
+/* Typewriter Animation */
+.authorHead{
+  animation: typing 3s steps(17) forwards,
+  blinking 1s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+  
+}
+
+@keyframes blinking {
+  50% {
+    border-color: transparent;
+  }
+}
 
 .searchBar.open{
   transform: translateY(0);
