@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Css -->
+    <link href="../output.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Search bar -->
+    <div
+      class="searchBar invisible translate-y-[-100px] bg-myblack py-1 absolute left-0 right-0"
+    >
+      <div class="container relative">
+        <form action="/search" class="searchForm" role="search" method="POST">
+          <input
+            class="m-0 p-0"
+            type="search"
+            name="searchTerm"
+            id="searchInput"
+            aria-label="Search"
+            placeholder="Search the site..."
+          />
+        </form>
+        <div
+          id="searchClose"
+          class="absolute top-0 right-0 p-[15px] text-mylightgray"
+        >
+          Close
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Header -->
+      <header class="header grid grid-cols-2 pt-2.5">
+        <a
+          class="headerLogo font-extrabold text-[25xp] hover:underline flex items-center"
+          href="/"
+          >Daily Scribbles</a
+        >
+
+        <nav class="headerNav flex justify-center items-center">
+          <ul class="flex gap-4 font-semibold p-0">
+            <li>
+              <a class="navLink p-2.5 hover:underline" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="navLink p-2.5 hover:underline" href="about.html"
+                >About</a
+              >
+            </li>
+            <li>
+              <a class="navLink p-2.5 hover:underline" href="contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="headerBtn flex justify-end">
+          <button
+            class="searchBtn flex gap-1.5 items-center rounded-radius py-1.5 px-3 bg-none text-fontSizeBase font-semibold text-myblack border-transparent border-2 hover:border-myblack"
+            aria-expanded="false"
+          >
+            Search
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </header>
+
+      <main class="main py-5">
+        <h2>My Socials</h2>
+        <div class="grid grid-cols-1 md:grid-cols-40/60 gap-5 contactContainer">
+          <div
+            class="animations w-full place-items-center grid grid-cols-2 md:grid-cols-1 md:place-items-start"
+          >
+            <img
+              src="../img/agenda.gif"
+              alt="Short looping video"
+              class="max-w-60 h-auto"
+            />
+            <img
+              src="../img/contact.gif"
+              alt="Short looping video"
+              class="max-w-60 h-auto md:place-self-end"
+            />
+          </div>
+
+          <div class="contact-wrapper place-items-center">
+            <div>
+              <h3 class="font-semibold text-center mb-4">
+                Would love to hear from you❤️
+              </h3>
+
+              <ul>
+                <li class="flex items-center gap-4 mb-5">
+                  <a
+                    class="text-fontSizeXl hover:text-red-600 flex duration-300"
+                    target="_blank"
+                    href="https://www.gmail.com"
+                    ><i class="fa-regular fa-envelope"></i
+                  ></a>
+                  <span class="text-fontSizeMd"
+                    >professional.jeffb@gmail.com</span
+                  >
+                </li>
+                <li class="flex items-center gap-4 mb-5">
+                  <a
+                    class="text-fontSizeXl hover:text-blue-600 flex duration-300"
+                    target="_blank"
+                    href="https://www.linkedin.com/in/jeffrey-b-709a511aa"
+                    ><i class="fa-brands fa-linkedin"></i
+                  ></a>
+                  <span class="text-fontSizeMd"
+                    >linkedin.com/in/jeffrey-b-709a511aa</span
+                  >
+                </li>
+                <li class="flex items-center gap-4 mb-5">
+                  <a
+                    class="text-fontSizeXl hover:bg-myblack h-fit flex rounded-full duration-300"
+                    target="_blank"
+                    href="https://www.github.com/DarkOPJ/"
+                    ><i
+                      class="fa-brands fa-github rounded-full hover:text-white duration-300"
+                    ></i
+                  ></a>
+                  <span class="text-fontSizeMd">DarkOPJ</span>
+                </li>
+              </ul>
+
+              <h3 class="mt-1">
+                Buy Me a
+                <button class="text-amber-900 hover:underline" id="coffee-btn">
+                  Coffee
+                </button>
+                ❤️
+              </h3>
+
+              <div class="coffee-form-wrapper overflow-hidden h-0 w-full">
+                <form
+                  action="/paystack"
+                  method="POST"
+                  class="coffee-form"
+                  id="coffee-form"
+                >
+                  <div class="my-3 grid gap-4 grid-cols-1 sm:grid-cols-2">
+                    <div class="w-full">
+                      <label for="email" class="font-bold">E-mail</label>
+                      <input
+                        type="email"
+                        style="margin: 0"
+                        class="border border-mygray m-0"
+                        placeholder="john@example.com"
+                        id="email"
+                        name="email"
+                        required
+                      />
+                    </div>
+                    <div class="w-full">
+                      <label for="amount" class="font-bold">Amount (GH₵)</label>
+                      <input
+                        type="number"
+                        style="margin: 0"
+                        class="border border-mygray"
+                        placeholder="eg. 50"
+                        id="amount"
+                        name="amount"
+                        required
+                      />
+                    </div>
+                    <div class="w-full">
+                      <label for="firstName" class="font-bold"
+                        >First Name</label
+                      >
+                      <input
+                        type="text"
+                        style="margin: 0"
+                        class="border border-mygray"
+                        placeholder="eg. John"
+                        id="firstName"
+                        name="firstName"
+                      />
+                    </div>
+                    <div class="w-full">
+                      <label for="lastName" class="font-bold">Last Name</label>
+                      <input
+                        type="text"
+                        style="margin: 0"
+                        class="border border-mygray"
+                        placeholder="eg. Smith"
+                        id="lastName"
+                        name="lastName"
+                      />
+                    </div>
+
+                    <div class="w-full flex justify-center">
+                      <input
+                        type="submit"
+                        style="margin: 0"
+                        class="text-white bg-black cursor-pointer"
+                        value="Buy me a Coffee"
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="m-16 text-center">
+        &copy; 2025 Jeffrey • Built with NodeJs and MongoDB
+      </footer>
+    </div>
+  </body>
+</html>

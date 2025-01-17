@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./views/**/*.ejs", "./public/**/*.js"],
   theme: {
     extend: {
       screens: {
@@ -38,6 +38,9 @@ module.exports = {
       dropShadow: {
         'shadow': '0px 44px 34px rgba(0, 0, 0, 0.25)',
       },
+      gridTemplateColumns: {
+        '40/60' : "38% 60%"
+      }
     },
   },
   plugins: [],
