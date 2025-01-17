@@ -13,28 +13,14 @@
   </head>
   <body>
     <!-- Search bar -->
-    <div
-      class="searchBar invisible translate-y-[-100px] bg-myblack py-1 absolute left-0 right-0"
-    >
+    <div class="searchBar invisible translate-y-[-100px] bg-myblack py-1 absolute left-0 right-0" id="searchBar">
       <div class="container relative">
-        <form action="/search" class="searchForm" role="search" method="POST">
-          <input
-            class="m-0 p-0"
-            type="search"
-            name="searchTerm"
-            id="searchInput"
-            aria-label="Search"
-            placeholder="Search the site..."
-          />
-        </form>
-        <div
-          id="searchClose"
-          class="absolute top-0 right-0 p-[15px] text-mylightgray"
-        >
-          Close
-        </div>
+          <form action="/search" class="searchForm" role="search" method="POST">
+          <input class="m-0 p-0" type="search" name="searchTerm" id="searchInput" aria-label="Search" placeholder="Search the site...">
+          </form>
+          <button id="searchClose" class="absolute top-[50%] translate-y-[-50%] right-1.5  p-[10px] text-myblack  w-fit h-full hover:bg-red-500">Close</button>
       </div>
-    </div>
+  </div>
 
     <div class="container">
       <!-- Header -->
@@ -64,7 +50,7 @@
         <div class="headerBtn flex justify-end">
           <button
             class="searchBtn flex gap-1.5 items-center rounded-radius py-1.5 px-3 bg-none text-fontSizeBase font-semibold text-myblack border-transparent border-2 hover:border-myblack"
-            aria-expanded="false"
+            aria-expanded="false" id="searchBtn"
           >
             Search
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -170,6 +156,7 @@
         &copy; 2025 Jeffrey • Built with NodeJs and MongoDB
     </footer>
 
+    <script src="../js/search.js"></script>
     </div>
   </body>
 </html>
